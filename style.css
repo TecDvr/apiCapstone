@@ -1,6 +1,7 @@
 body {
 	margin: 0;
-	padding: 0;
+    padding: 0;
+    box
 }
 
 .flex-container {
@@ -31,7 +32,7 @@ body {
 .seattleButton {
     height: 300px;
     width: 90%;
-    background-color: white;
+    background-color: rgb(223, 223, 223);
     border: 1px solid white;
     border-radius: 10px;
     margin-left:auto;
@@ -57,4 +58,28 @@ body {
 
 .tacomaHidden {
     display:none;
+}
+
+h1 {
+    background-color:grey;
+    margin:0;
+    padding:0;
+}
+
+h2 {
+    background-color:lightgray;
+    margin:0;
+    padding:0; 
+    height: 450px;
+}
+
+h3 {
+    background-color: rgb(238, 238, 238);
+    margin:0;
+    padding:0; 
+    height: 300px;
+}
+
+li {
+    display: inline-block;
 }

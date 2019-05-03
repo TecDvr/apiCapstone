@@ -13,39 +13,33 @@ function watchTacomaClick() {
 };
 
 function seattleButton() {
-    $('.seattle').on('click', '.seattleButton', function(event) {
-        console.log('working');
+    $('body').on('click', '.seattleButton', function(event) {
+        $('.flex-container').html(`
+        <h1>SEATTLE</h1>
+        <h2>color display will indicate tide strength (red, yellow, green)</h2>
+        <h3>display time to dive</h3>
+        `);
+        $('.flex-container').removeClass('flex-container');
+        
     });
+}
+
+function tacomaButton() {
+  $('body').on('click', '.tacomaButton', function(event) {
+    $('.flex-container').html(`
+      <h1>TACOMA</h1>
+      <h2>color display will indicate tide strength (red, yellow, green)</h2>
+      <h3>display time to dive</h3>
+      `);
+    $('.flex-container').removeClass('flex-container');
+  });
 }
   
   function fireItUp() {
     watchSeattleClick();
     watchTacomaClick();
-    //seattleHover();
-    //tacomaHover();
-    //mouseOff();
+    seattleButton();
+    tacomaButton();
   };
   
   $(fireItUp);
-
-/*function seattleHover() {
-    $('.seattle, .test').hover(function (event) {
-      $('.flex-tacoma').addClass('rotate').hide().fadeIn(500);
-      $('.flex-seattle').removeClass('rotate');
-    });
-  };
-
-    /*function tacomaHover() {
-    $('.tacoma').hover(function (event) {
-      $('.flex-seattle').addClass('rotate').hide().fadeIn(500);
-      $('.flex-tacoma').removeClass('rotate');
-      $('.test').removeClass('testing')
-      $('.test').slideToggle();
-    });
-  };
-  
-  function mouseOff() {
-    $('body').mouseout(function (event) {
-      $('div').removeClass('rotate');
-    });
-  };*/
