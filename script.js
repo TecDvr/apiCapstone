@@ -1,3 +1,21 @@
+'use strict';
+
+const url = 'https://tidesandcurrents.noaa.gov/api/datagetter?date=today&station=9447130&product=water_level&units=english&time_zone=lst&format=json &datum=STND';
+
+function getTides() {
+  fetch(url)
+  .then(response => response.json())
+  .then(responseJson => console.log(responseJson));
+};
+
+
+
+
+
+
+
+
+
 function watchSeattleClick() {
     $('.seattle').on('click', function() {
         $('.seattleButton').removeClass('seattleHidden').hide().fadeIn(1000);
@@ -20,6 +38,7 @@ function seattleButton() {
         <h3>display time to dive</h3>
         `);
         $('.flex-container').removeClass('flex-container');
+        getTides();
         
     });
 }
